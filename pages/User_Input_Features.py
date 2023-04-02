@@ -8,6 +8,7 @@ from sklearn.preprocessing import MinMaxScaler,StandardScaler, OneHotEncoder
 from sklearn.compose import ColumnTransformer,make_column_selector
 
 from pages import machine_learning_algorithms
+
 reg_list,reg_list_name = machine_learning_algorithms.list_of_algorithm()
 
 st.title('User Input Features')

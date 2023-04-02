@@ -43,7 +43,7 @@ else:
         Education_slider = st.sidebar.slider("Education:",12,21,16 )
         MaritalStatus_selectbox = st.sidebar.selectbox(  "MaritalStatus: ",MaritalStatus)    
 
-        Usages_slider = st.sidebar.slider( "Schedule your appointment:",2,7,int(4))
+        Usages_slider = st.sidebar.slider( "Choose your Usages level",2,7,int(4))
         Fitness_slider = st.sidebar.slider( "Choose your Fitness level",1,5,int(3) )
         income_slider = st.sidebar.slider("Choose your income level",29562,104581,59741)
         data = {'Product': Products_selectbox,
@@ -86,7 +86,7 @@ df1 = pd.concat([df,input_df],axis=0)
 
 X=factorialing(df1) 
 X=scalering(X)
-st.write('User input',X[-1:,:-1])
+st.write('User input',input_df)
 
 reg_list,reg_list_name = machine_learning_algorithms.list_of_algorithm()
 
